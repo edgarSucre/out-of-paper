@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutOfPaper.UI", "OutOfPaper.UI\OutOfPaper.UI.csproj", "{2EFB97EE-C580-41FF-A77A-E0A328F2649A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutOfPaper.Drivers", "OutOfPaper.Drivers\OutOfPaper.Drivers.csproj", "{1B956356-0A2C-41F4-997D-79DA3466F2AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2EFB97EE-C580-41FF-A77A-E0A328F2649A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EFB97EE-C580-41FF-A77A-E0A328F2649A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EFB97EE-C580-41FF-A77A-E0A328F2649A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B956356-0A2C-41F4-997D-79DA3466F2AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B956356-0A2C-41F4-997D-79DA3466F2AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B956356-0A2C-41F4-997D-79DA3466F2AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B956356-0A2C-41F4-997D-79DA3466F2AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
