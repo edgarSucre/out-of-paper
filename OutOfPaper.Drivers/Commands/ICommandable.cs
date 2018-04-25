@@ -15,5 +15,15 @@
          */
 
         void AddItems(string taxRate, decimal price, int quantity, string description);
+        void RemoveLastItem();
+        void PrintSubtotal();
+        void ShowSubtotal();
+        void ApplyPercentageDiscount(decimal percentage);
+        void ApplyAmountDicount(decimal amunt);
+        void CancelItem(string taxRate, decimal price, int quantity, string description);
+        void CancelInvoce();
+        void SetMeansOfPayment(string meansOfPayment);
+        void SetPartialMeansOfPayment(string meansOfPayment, decimal amount);
+        
     }
 }

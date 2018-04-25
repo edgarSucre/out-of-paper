@@ -15,7 +15,30 @@ namespace OutOfPaper.Drivers.Commands.ApiCommands
         private const string COSTUMER_SOCIAL_REASON = "JS";
         private const string COSTUMER_ADDITIOAL_INFO = "J";
         private const string COMENT = "@";
-        
+        private const string TAX_RATE_FREE_ITEM = " ";
+        private const string TAX_RATE_ONE_ITEM = "!";
+        private const string TAX_RATE_TWO_ITEM = "\"";
+        private const string TAX_RATE_THREE_ITEM = "#";
+        private const string ITEM_CORRECTION = "k";
+        private const string PRINTED_SUBTOTAL = "3";
+        private const string SCREEN_SUBTOTAL = "4";
+        private const string PERCENTAGE_DISCOUNT = "p";
+        private const string AMOUNT_DISCOUNT = "q";
+        private const string TAX_RATE_FREE_ITEM_CANCELATION = " "; // needs test;
+        private const string TAX_RATE_ONE_ITEM_CANCELATION = "¡";
+        private const string TAX_RATE_TWO_ITEM_CANCELATION = "¢";
+        private const string TAX_RATE_THREE_ITEM_CANCELATION = "£";
+        private const string CANCEL_INVOICE = "7";
+        private const string MEANS_OF_PAYMENT = "1";
+        private readonly string[] MEANS_OF_PAYMENT_CASH = { "01", "02", "03", "04"};
+        private readonly string[] MEANS_OF_PAYMENT_CHECK = { "05", "06", "07", "08" };
+        private readonly string[] MEANS_OF_PAYMENT_CARD = { "09", "10", "11", "12" };
+        private readonly string[] MEANS_OF_PAYMENT_TICKET = { "13", "14", "15", "16" };
+        private const string PARTIAL_MEAN_OF_PAYMENT = "2";
+
+
+
+
         #endregion
 
         TallyDascon1125Commands()
@@ -61,6 +84,12 @@ namespace OutOfPaper.Drivers.Commands.ApiCommands
         {
             var command = COMENT + coment;
             Execute(command);
+        }       
+
+        public void AddItems(string taxRate, decimal price, int quantity, string description)
+        {
+            var command = taxRate + price + quantity + description;
+            Execute(command);
         }
 
         private void Execute(string command)
@@ -78,12 +107,6 @@ namespace OutOfPaper.Drivers.Commands.ApiCommands
             StackTrace stackTrace = new StackTrace();
             MethodBase methodBase = stackTrace.GetFrame(2).GetMethod();
             return methodBase.Name;
-        }
-
-        public void AddItems(string taxRate, decimal price, int quantity, string description)
-        {
-            var command = taxRate + price + quantity + description;
-            Execute(command);
         }
     }
 }

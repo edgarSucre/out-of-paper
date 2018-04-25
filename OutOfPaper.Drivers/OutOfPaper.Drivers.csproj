@@ -43,7 +43,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Commands\ApiCommands\TallyDascon1125Commands.cs" />
     <Compile Include="Commands\ICommandable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
